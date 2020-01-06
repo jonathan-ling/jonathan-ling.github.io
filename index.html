@@ -1,17 +1,78 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Jonathan Ling</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-Syntax highlighted code block
+  <link rel="shortcut icon" href="icons/favicon.ico">
 
-# Header 1
-## Header 2
-### Header 3
+  <!--jQuery-->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 
-- Bulleted
-- List
+  <!--AngularJS-->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
 
-1. Numbered
-2. List
+  <!--Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-**Bold** and _Italic_ and `Code` text
+  <!--Font Awesome-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <!--Custom css and js files-->
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/nav_colour_scheme.css">
+  <script src="js/index.js"></script>
+
+</head>
+<body ng-app="myApp">
+
+  <!-- Add logo here if applicable
+  <header>
+     <hgroup class="header-image pull-left">
+           <a class="logo" href="/"><img src="icons/logo.png"></a>
+     </hgroup>
+  </header>
+-->
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#" onClick="return false;"><b>Jonathan Ling</b></a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav nav-tabs-nostyle">
+          <li class="my-nav-button active" id="my-nav-home"><a href="#/">Home</a></li>
+          <li class="my-nav-button" id="my-nav-about"><a href="#about">About</a></li>
+          <li class="my-nav-button" id="my-nav-resume"><a href="#resume">Resume</a></li>
+          <li class="my-nav-button" id="my-nav-projects"><a href="#projects">Projects</a></li>
+        </ul>
+        <ul class="nav navbar-nav nav-tabs-nostyle navbar-right">
+          <li><a href="javascript:location=send"><i class="fa fa-envelope"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/jonathan-ling" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+          <li><a href="https://github.com/jonathan-ling" target="_blank"><i class="fa fa-github"></i></a></li>
+        </ul>
+      </div>
+  </nav>
+
+  <div class="container-fluid" style="padding: 20px; padding-bottom: 50px;" ng-view="">
+  </div>
+
+  <footer>
+    &copy;
+    <span id="copyright">
+        <script>document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()))</script>
+    </span>
+    Jonathan Ling
+  </footer>
+
+</body>
+</html>

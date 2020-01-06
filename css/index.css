@@ -1,0 +1,90 @@
+/* Global variables */
+:root {
+    --lightShade: #FFFFFF; /* Background, nav bar text and footer text */
+    --navBarShade: #A33327; /*#0F292F; /* Nav bar */
+    --navBarAccent: #D7695A; /*#14A098; /* Nav bar highlight */
+    --darkShade: black; /*#501F3A; /* Footer */
+}
+
+/* Font faces */
+@font-face {
+    font-family: Rubik;
+    src:url(../fonts/Rubik/Rubik-Regular.ttf);
+}
+
+@font-face {
+    font-family: Rubik;
+    src:url(../fonts/Rubik/Rubik-Italic.ttf);
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Rubik;
+    src:url(../fonts/Rubik/Rubik-Bold.ttf);
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Rubik;
+    src:url(../fonts/Rubik/Rubik-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Styling */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    font-family: Rubik;
+    background-color: var(--lightShade);
+}
+
+header {
+    text-align: center;
+    padding: 16px;
+    overflow: auto;
+}
+
+footer {
+    background-color: var(--navBarShade);
+    color: var(--lightShade);
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    line-height: 50px; /* Vetically center the text */
+}
+
+.navbar {
+    border-radius: 0px;
+    border: none;
+  }
+
+.disabled-link {
+  color: var(--navBarShade);
+  background-color: var(--lightShade);
+}
+
+.label-tags {
+  color: var(--lightShade);
+  background-color: var(--navBarAccent);
+}
+
+/* Orange button colour scheme
+  .btn-default:not(.dropdown-toggle) {
+      background-color: #ffb800;
+      color: #ffffff;
+      border-color: #ffb800;
+  }
+  .btn-default:hover:not(.dropdown-toggle),
+  .btn-default:focus:not(.dropdown-toggle),
+  .btn-default:active:not(.dropdown-toggle)    {
+      background-color: #ff9600;
+      color: #000000;
+      border-color: #ff9600;
+  }
+*/

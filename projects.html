@@ -1,0 +1,107 @@
+<div class="container-fluid text-center">
+  <h2><b>Projects</b></h2>
+</div>
+
+<h3>Dynamic Pricing of Airline Tickets Using Reinforcement Learning</h3>
+<p style="font-style: italic">Stanford University course project
+  (<a href="https://explorecourses.stanford.edu/search?q=AA228&academicYear=20192020" target="_blank">AA 228</a>
+   - Decision Making Under Uncertainty)</p>
+<span class="label label-tags">Data Science</span>
+<span class="label label-tags">Machine Learning</span>
+<br><br>
+<div class="row">
+  <div class="col-md-3">
+    <img src="images/doubleAgentSarsa-2policy.png" class="img-responsive">
+  </div>
+  <div class="col-md-9">
+    <p>
+      Dynamic pricing in the airline industry demonstrates some of the most effective pricing schemes in business to maximize revenue based on customers’ willingness to pay for particular goods at particular times. In this problem, the airline's goal is to set ticket prices to maximize its revenue over a finite time horizon. This paper considers the case of pricing a specific inventory item (e.g., economy class tickets) that is sold to different customer segments based on their inputs when purchasing the ticket (e.g., days to departure, one way/return, length of trip, etc.) and which thus has different price points. We review common approaches taken to solve the single-segment (i.e., single price point) dynamic pricing problem and formulate a multi-segment (i.e., multiple price points) dynamic pricing problem using a factored multi-agent Markov decision process (MMDP) framework. We solve the multi-segment dynamic pricing problem using modern reinforcement learning (RL) approaches including Sarsa and Sarsa-Lambda, and compare the performance of these approaches to various baseline policies.
+      <br>
+      <a href="/#" class="btn btn-primary btn-xs"><i class="fa fa-file"></i> Paper</a>
+      <a href="/#" class="btn btn-primary btn-xs"><i class="fa fa-github"></i> GitHub</a>
+    </p>
+  </div>
+</div>
+<hr>
+<h3>Optimizing Passenger Flow at an Airport</h3>
+<p style="font-style: italic">Accenture project with an airport client</p>
+<span class="label label-tags">Operations Analytics</span>
+<span class="label label-tags">Data Visualization</span>
+<br><br>
+<div class="row">
+  <div class="col-md-3">
+    <img src="images/airport-client.png" class="img-responsive">
+  </div>
+  <div class="col-md-9">
+    <p>
+      This project involved building an enterprise data platform from scratch for a major Australian airport to monitor and improve passenger flow and reduce congestion. The project required four main skillsets: infrastructural integration, analytics, visualization and front-end development. I was involved in the first three aspects, helping to design the database structure for integration in Azure, modeling wifi data to track and predict foot traffic, and building out several visualization elements in Power BI. The platform provided the client's central operations tower with a real-time dashboard feed of passenger flow and areas of congestion at the arrival and departure terminals, enabling proactive flow management. It ultimately won an industry Technology award from the Australian Airports Association for innovation and excellence.
+    </p>
+  </div>
+</div>
+<hr>
+<h3>Predicting Repeat Callers with Classifier Models</h3>
+<p style="font-style: italic">Accenture project with an energy utlity client</p>
+<span class="label label-tags">Data Science</span>
+<span class="label label-tags">Machine Learning</span>
+<br><br>
+<div class="row">
+  <div class="col-md-3">
+    <img src="images/energy-client.png" class="img-responsive">
+  </div>
+  <div class="col-md-9">
+    <p>
+      This project aimed to help an energy utility client streamline its customer contact points and reduce call center costs. In terms of analytics, I was involved in designing a database for the purpose of multi-channel analysis (that is, across the various channels that customers would contact the client, such as by phone, website and app) and then used this to develop a predictive model to classify repeat callers to proactively manage their main call reasons. For the first task, I designed the multi-channel database as an analytic record, an architectural pattern that has the advantage of being easily added to by a real-time stream of records, and which is readily consumable by a machine learning model. I also created random forest and XGBoost classifier models in Python to predict repeat callers, and used 'average precision' as the performance metric, as it works better than the standard 'accuracy' metric when the classes (in this case, repeat callers and non-repeat callers) are highly imbalanced. The random forest model achieved an average precision score of 0.7, translating into potential savings in proactive call management of several million dollars per year.
+    </p>
+  </div>
+</div>
+<hr>
+<h3>Predicting Modem Flaps with Decision Tree Classification</h3>
+<p style="font-style: italic">Accenture project with a telco client</p>
+<span class="label label-tags">Data Science</span>
+<span class="label label-tags">Machine Learning</span>
+<span class="label label-tags">Data Visualization</span>
+<br><br>
+<div class="row">
+  <div class="col-md-3">
+    <img src="images/telco-client-flaps.png" class="img-responsive">
+  </div>
+  <div class="col-md-9">
+    <p>
+      This project aimed to help a telco client improve its ability to manage modem flaps (intermittent connectivity dropouts from the network). Flapping issues could be classified as modem-based (originating from a specific customer's modem) or network-based (a network-wide problem). These two cases should be treated differently to be cost-efficient, but the client did not have the ability to distinguish them. To do so, I built a classifier model by using a decision tree-based model on several feature variables, as well as a graph database (Neo4j) to identify close-proximity groups of problematic nodes. To aid modeling and stakeholder communication, I also visualized the telco network graph, both geographically (with R's leaflet package) and logically (with R's visNetwork package).
+    </p>
+  </div>
+</div>
+<hr>
+<h3>Applying the Theory of Constraints to Workforce Management</h3>
+<p style="font-style: italic">Accenture project with a telco client</p>
+<span class="label label-tags">Operations Analytics</span>
+<span class="label label-tags">Theory of Constraints</span>
+<br><br>
+<div class="row">
+  <div class="col-md-3">
+    <img src="images/telco-client-workforce.png" class="img-responsive">
+  </div>
+  <div class="col-md-9">
+    <p>
+      This project aimed to help a telco client improve the forecasting accuracy and capacity management processes of their technician workforce. With their original operational model, new customers would schedule an appointment with the client to a get a technician to install a connection from their home to the network. However, this demand was difficult to forecast, being highly volatile from day to day, which made it expensive for the client as they had to continuously expand and contract their workforce. From the outset of the project, I challenged the idea that improving forecasting accuracy was the real goal. Using the Theory of Constraints, a management paradigm built on operations research principles, I identified the overarching goal (connecting end users efficiently to the network) and key conflict (lead time required) to propose a solution that would not only improve the project's initial KPIs but also  significantly reduce operational expenses. Though not implemented due to scope constraints, it gained endorsement from the client.
+    </p>
+  </div>
+</div>
+<hr>
+<h3>Creating This Portfolio Website</h3>
+<p style="font-style: italic">Personal project</p>
+<span class="label label-tags">Web Development</span>
+<br><br>
+<div class="row">
+  <div class="col-md-3">
+    <img src="images/website.png" class="img-responsive">
+  </div>
+  <div class="col-md-9">
+    <p>
+      I have been programming with web development languages (originally HTML, CSS and JavaScript) since elementary school, and have dabbled every now and then in side-projects for creating various personal websites and JavaScript applications. I have since expanded my repertoire of programming languages, both in web development and analytics. This website was wholly built by me from scratch, and employs HTML, CSS, JavaScript, AngularJS, JQuery and Bootstrap. AngularJS was used to make this a single page application (SPA) so that moving to a different page doesn't cause the browser to refresh, while also allowing for a modularized code structure using the model-view-controller pattern (i.e., the code for the content, skin and display mechanism respectively are separated). Feel free to look under the hood!
+      <br>
+      <a href="/#" class="btn btn-primary btn-xs"><i class="fa fa-github"></i> GitHub</a>
+    </p>
+  </div>
+</div>
+<hr>
