@@ -74,6 +74,12 @@ footer {
   background-color: var(--navBarAccent);
 }
 
+.vcenter {
+ display: inline-block;
+ vertical-align: middle;
+ float: none;
+}
+
 /* Orange button colour scheme
   .btn-default:not(.dropdown-toggle) {
       background-color: #ffb800;
