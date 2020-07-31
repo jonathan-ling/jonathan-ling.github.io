@@ -38,6 +38,15 @@ app.config(function($routeProvider) {
            $('#my-nav-projects').addClass('active');
          }
        }
+    })
+    .when("/articles", {
+        templateUrl : "articles.html",
+        resolve: {
+         init: function() {
+           $('.navbar-nav li').removeClass('active');
+           $('#my-nav-articles').addClass('active');
+         }
+       }
     });
 });
 app.config(['$locationProvider', function($locationProvider) {
