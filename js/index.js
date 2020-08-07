@@ -47,6 +47,42 @@ app.config(function($routeProvider) {
            $('#my-nav-articles').addClass('active');
          }
        }
+    })
+    .when("/articles/important-vs-urgent", {
+        templateUrl : "articles/important-vs-urgent.html"
+    })
+    .when("/articles/the-productivity-equation", {
+        templateUrl : "articles/the-productivity-equation.html"
+    })
+    .when("/articles/the-importance-of-rest", {
+        templateUrl : "articles/the-importance-of-rest.html"
+    })
+    .when("/articles/triage", {
+        templateUrl : "articles/triage.html"
+    })
+    .when("/articles/holistic-learning", {
+        templateUrl : "articles/holistic-learning.html"
+    })
+    .when("/articles/spaced-repetition", {
+        templateUrl : "articles/spaced-repetition.html"
+    })
+    .when("/articles/conquering-the-pace-of-university-learning", {
+        templateUrl : "articles/conquering-the-pace-of-university-learning.html"
+    })
+    .when("/articles/analysis-paralysis", {
+        templateUrl : "articles/analysis-paralysis.html"
+    })
+    .when("/articles/my-personal-exam-study-system", {
+        templateUrl : "articles/my-personal-exam-study-system.html"
+    })
+    .when("/articles/knowing-new-possibilities", {
+        templateUrl : "articles/knowing-new-possibilities.html"
+    })
+    .when("/articles/we-are-more-creative-when-solving-other-peoples-problems", {
+        templateUrl : "articles/we-are-more-creative-when-solving-other-peoples-problems.html"
+    })
+    .when("/articles/fixed-vs-growth-mindset", {
+        templateUrl : "articles/fixed-vs-growth-mindset.html"
     });
 });
 app.config(['$locationProvider', function($locationProvider) {
