@@ -1,5 +1,5 @@
 // configure AngularJS routing for Single Page Application functionality
-var app = angular.module("myApp", ["ngRoute"]);
+var app = angular.module("mainApp", ["ngRoute"]);
 
 app.config(function($routeProvider) {
     $routeProvider

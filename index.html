@@ -22,12 +22,17 @@
   <!--Font Awesome-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  <!--Custom css and js files-->
+  <!--Custom css files-->
   <link rel="stylesheet" href="css/index.css">
   <link rel="stylesheet" href="css/nav_colour_scheme.css">
-  <script src="js/index.js"></script>
 
-  <!--Google Site Verification-->
+  <!--Custom AngularJS modules-->
+  <script src="js/app.js"></script>
+
+  <!--Custom AngularJS controllers-->
+  <script src="js/controllers/mainController.js"></script>
+
+  <!--Google Site verification-->
   <meta name="google-site-verification" content="a7bFnYZxOhhVTs0-9m06KpqHjrzOLkzg8Rc2jNT0o2k" />
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -40,7 +45,7 @@
     gtag('config', 'G-GNFWH60LBT');
   </script>
 </head>
-<body ng-app="myApp">
+<body ng-app="mainApp" ng-controller="mainController">
 
   <!-- Add logo here if applicable
   <header>

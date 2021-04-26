@@ -4,156 +4,30 @@
 
 <div class="row">
    <div class="col-lg-8 col-lg-offset-2">
-    <h3>Prioritizing Order Scheduling Under Resource Constraints in a CPG Supply Chain</h3>
-    <p style="font-style: italic">Niagara Bottling internship</p>
-    <span class="label label-tags">Operations Research</span>
-    <span class="label label-tags">Mathematical Optimization</span>
-    <br><br>
-    <div class="row">
+
+    <div ng-repeat="project in contents">
+      <h3> {{ project.title }} </h3>
+      <p style="font-style: italic" ng-bind-html="trust(project.client)"></p>
+      <span ng-repeat="tag in project.tags">
+        <span class="label label-tags"> {{tag}} </span> &nbsp;
+      </span>
+      <br><br>
+      
+      <div class="row">
         <div class="col-md-2 vcenter">
-          <img src="images/cpg-warehouse.png" class="img-responsive">
+          <img src=" {{project.image}} " class="img-responsive">
         </div><div class="col-md-10 vcenter">
           <p>
-            In supply chain distribution, customer orders are fulfillable only if all the product and logistical resources required to do so are available; otherwise, it must be rescheduled. Three key resources required are the product, carrier (i.e., truck) and dock (i.e., warehouse loading space). To avoid wasting scheduling efforts, schedulers must decide whether to schedule or reschedule each order with respect to the customers’ desired delivery date before taking that action, while considering penalties to reschedule. In this project, I formulated a binary integer program as a variant of the knapsack problem in operations research, to optimize the prioritization sequence of orders under resource contention constraints.
-            <br>
-            <a href="artefacts/2020-08 Scheduling.pdf" target="_blank" class="btn btn-primary btn-xs"><i class="fa fa-file"></i> Paper</a>
-          </p>
-        </div>
-    </div>
-    <hr>
-    <h3>Developing a Digital Scheduling Product for the US Air Force</h3>
-    <p style="font-style: italic">Stanford University course project
-      (<a href="https://explorecourses.stanford.edu/search?q=MS%26E297&academicYear=20192020" target="_blank">MS&E 297</a>
-       - "Hacking for Defense": Solving National Security issues with the Lean Launchpad) taught by Steve Blank, pioneer of the Lean Launchpad methodology</p>
-    <span class="label label-tags">Entrepreneurship</span>
-    <span class="label label-tags">Lean Launchpad</span>
-    <span class="label label-tags">Customer Discovery</span>
-    <span class="label label-tags">Operations Research</span>
-    <br><br>
-    <div class="row">
-        <div class="col-md-2 vcenter">
-          <img src="images/time-flies-mvp.png" class="img-responsive">
-        </div><div class="col-md-10 vcenter">
-          <p>
-            Within the US Air Force, mobility squadron schedulers resort to manual schedule generation methods, including using whiteboards and Excel spreadsheets. This often leads to brittle schedules, with which enacting last-minute changes results in significant ramifications on squadron morale while impacting personal and training time. During this course, our team conducted 130+ customer discovery interivews and iterated through several MVPs (minimum viable products) to develop a digital scheduling product that would improve the disparate interfaces schedulers use while optimizing schedule generation algorithmically, to lead to improved scheduling efficiency, crew rest and safety, and deployment responsiveness.
-            <br>
-            <a href="https://www.youtube.com/watch?v=WrYpxD58Wh0" target="_blank" class="btn btn-primary btn-xs"><i class="fa fa-video-camera"></i> Video</a>
-            <a href="https://www.slideshare.net/sblank/time-flies-h4d-2020-lessons-learned" target="_blank" class="btn btn-primary btn-xs"><i class="fa fa-file"></i> Presentation</a>
-          </p>
-        </div>
-    </div>
-    <hr>
-    <h3>Dynamically Pricing Airline Tickets Using Reinforcement Learning</h3>
-    <p style="font-style: italic">Stanford University course project
-      (<a href="https://explorecourses.stanford.edu/search?q=AA228&academicYear=20192020" target="_blank">AA 228</a>
-       - Decision Making Under Uncertainty)</p>
-    <span class="label label-tags">Data Science</span>
-    <span class="label label-tags">Machine Learning</span>
-    <br><br>
-    <div class="row">
-        <div class="col-md-2 vcenter">
-          <img src="images/doubleAgentSarsa-2policy.png" class="img-responsive">
-        </div><div class="col-md-10 vcenter">
-          <p>
-            In the airline industry, dynamic pricing is a common tool for revenue management, where an airline's goal is to set ticket prices to maximize its revenue over a finite time horizon. This paper considers the case of pricing a specific inventory item (e.g., economy class tickets) that is sold to different customer segments based on their inputs when purchasing the ticket (e.g., days to departure, one way/return, length of trip, etc.) and which thus has different price points. We review common approaches taken to solve the single-segment (i.e., single price point) dynamic pricing problem and formulate a multi-segment (i.e., multiple price points) dynamic pricing problem using a factored multi-agent Markov decision process (MMDP) framework. We solve the multi-segment dynamic pricing problem using modern reinforcement learning (RL) approaches including Sarsa and Sarsa-Lambda, and compare the performance of these approaches to various baseline policies.
-            <br>
-            <a href="https://github.com/jonathan-ling/aa-228/raw/master/final-project/doc/final_revisedjan2020.pdf" target="_blank" class="btn btn-primary btn-xs"><i class="fa fa-file"></i> Paper</a>
-            <a href="https://github.com/jonathan-ling/aa-228" target="_blank" class="btn btn-primary btn-xs"><i class="fa fa-github"></i> GitHub</a>
-          </p>
-        </div>
-    </div>
-    <hr>
-    <h3>Optimizing Passenger Flow at an Airport</h3>
-    <p style="font-style: italic">Accenture project with an airport client</p>
-    <span class="label label-tags">Operations Analytics</span>
-    <span class="label label-tags">Data Visualization</span>
-    <br><br>
-    <div class="row">
-      <div class="col-md-2 vcenter">
-        <img src="images/airport-client.jpeg" class="img-responsive">
-      </div><div class="col-md-10 vcenter">
-        <p>
-          This project involved building an enterprise data platform from scratch for a major Australian airport to monitor and improve passenger flow and reduce congestion. The project required four main skillsets: infrastructural integration, analytics, visualization and front-end development. I was involved in the first three aspects, helping to design the database structure for integration in Azure, modeling wifi data to track and predict foot traffic, and building out several visualization elements in Power BI. The platform provided the client's central operations tower with a real-time dashboard feed of passenger flow and areas of congestion at the arrival and departure terminals, enabling proactive flow management. It ultimately won an industry Technology award from the Australian Airports Association for innovation and excellence.
-        </p>
-      </div>
-    </div>
-    <hr>
-    <h3>Predicting Repeat Callers with Classifier Models</h3>
-    <p style="font-style: italic">Accenture project with an energy utlity client</p>
-    <span class="label label-tags">Data Science</span>
-    <span class="label label-tags">Machine Learning</span>
-    <br><br>
-    <div class="row">
-      <div class="col-md-2 vcenter">
-        <img src="images/energy-client.png" class="img-responsive">
-      </div><div class="col-md-10 vcenter">
-        <p>
-          This project aimed to help an energy utility client streamline its customer contact points and reduce call center costs. In terms of analytics, I was involved in designing a database for the purpose of multi-channel analysis (that is, across the various channels that customers would contact the client, such as by phone, website and app) and then used this to develop a predictive model to classify repeat callers to proactively manage their main call reasons. For the first task, I designed the multi-channel database as an analytic record, an architectural pattern that has the advantage of being easily added to by a real-time stream of records, and which is readily consumable by a machine learning model. I also created random forest and XGBoost classifier models in Python to predict repeat callers, and used 'average precision' as the performance metric, as it works better than the standard 'accuracy' metric when the classes (in this case, repeat callers and non-repeat callers) are highly imbalanced. The random forest model achieved an average precision score of 0.7, translating into potential savings in proactive call management of several million dollars per year.
-        </p>
-      </div>
-    </div>
-    <hr>
-    <h3>Predicting Modem Flaps with Decision Tree Classification</h3>
-    <p style="font-style: italic">Accenture project with a telco client</p>
-    <span class="label label-tags">Data Science</span>
-    <span class="label label-tags">Machine Learning</span>
-    <span class="label label-tags">Data Visualization</span>
-    <br><br>
-    <div class="row">
-      <div class="col-md-2 vcenter">
-        <img src="images/telco-client-flaps.png" class="img-responsive">
-      </div><div class="col-md-10 vcenter">
-        <p>
-          This project aimed to help a telco client improve its ability to manage modem flaps (intermittent connectivity dropouts from the network). Flapping issues could be classified as modem-based (originating from a specific customer's modem) or network-based (a network-wide problem). These two cases should be treated differently to be cost-efficient, but the client did not have the ability to distinguish them. To do so, I built a classifier model by using a decision tree-based model on several feature variables, as well as a graph database (Neo4j) to identify close-proximity groups of problematic nodes. To aid modeling and stakeholder communication, I also visualized the telco network graph, both geographically (with R's leaflet package) and logically (with R's visNetwork package).
-        </p>
-      </div>
-    </div>
-    <hr>
-    <h3>Improving Workforce Management Processes with the Theory of Constraints</h3>
-    <p style="font-style: italic">Accenture project with a telco client</p>
-    <span class="label label-tags">Operations Analytics</span>
-    <span class="label label-tags">Theory of Constraints</span>
-    <br><br>
-    <div class="row">
-      <div class="col-md-2 vcenter">
-        <img src="images/telco-client-workforce.png" class="img-responsive">
-      </div><div class="col-md-10 vcenter">
-        <p>
-          This project aimed to help a telco client improve the forecasting accuracy and capacity management processes of their technician workforce. With their original operational model, new customers would schedule an appointment with the client to a get a technician to install a connection from their home to the network. However, this demand was difficult to forecast, being highly volatile from day to day, which made it expensive for the client as they had to continuously expand and contract their workforce. From the outset of the project, I challenged the idea that improving forecasting accuracy was the real goal. Using the Theory of Constraints, a management paradigm built on operations research principles, I identified the overarching goal (connecting end users efficiently to the network) and key conflict (lead time required) to propose a solution that would not only improve the project's initial KPIs but also  significantly reduce operational expenses. Though not implemented due to scope constraints, it gained endorsement from the client.
-        </p>
-      </div>
-    </div>
-    <hr>
-    <h3>Optimizing Fiber-optic Network Design with Mixed Integer Programming and Gurobi</h3>
-    <p style="font-style: italic">Biarri project with an Internet provider client</p>
-    <span class="label label-tags">Operations Research</span>
-    <span class="label label-tags">Mathematical Optimization</span>
-    <br><br>
-    <div class="row">
-      <div class="col-md-2 vcenter">
-        <img src="images/network-design.jpg" class="img-responsive">
-      </div><div class="col-md-10 vcenter">
-        <p>
-          This project aimed to help a national Internet provider to design the layout of a fiber-optic network, to provide Internet access to cities of around 20,000 homes each. The goal was to find a layout that minimized the cost of the cabling and new infrastructure along streets, while still connecting all homes. Mathematically, we formulated this as a mixed integer program and solved it using Gurobi. My contribution to this project was in designing and implementing rules to avoided cables trespassing on private property. For a zipcode of 20,000 premises, this was a mixed integer program with 200,000 variables and 200,000 constraints. Using these and other operations research techniques, the company’s software reduced design time by 80% as compared to traditional layout planning methods.
-        </p>
-      </div>
-    </div>
-    <hr>
-    <h3>Creating This Portfolio Website</h3>
-    <p style="font-style: italic">Personal project</p>
-    <span class="label label-tags">Web Development</span>
-    <br><br>
-    <div class="row">
-      <div class="col-md-2 vcenter">
-        <img src="images/website.png" class="img-responsive">
-      </div><div class="col-md-10 vcenter">
-        <p>
-          I have been programming with web development languages (originally HTML, CSS and JavaScript) since elementary school, and have dabbled every now and then in side-projects for creating various personal websites and JavaScript applications. I have since expanded my repertoire of programming languages, both in web development and analytics. This website was wholly built by me from scratch, and employs HTML, CSS, JavaScript, AngularJS, JQuery and Bootstrap. AngularJS was used to make this a single page application (SPA) so that moving to a different page doesn't cause the browser to refresh, while also allowing for a modularized code structure using the model-view-controller pattern (i.e., the code for the content, skin and display mechanism respectively are separated). Feel free to look under the hood!
+          {{ project.description }}
           <br>
-          <a href="https://github.com/jonathan-ling/jonathan-ling.github.io" target="_blank" class="btn btn-primary btn-xs"><i class="fa fa-github"></i> GitHub</a>
-        </p>
+          <span ng-repeat="(name, link) in project.artefacts[0]">
+            <a href=" {{link}} " target="_blank" class="btn btn-primary btn-xs"><i class=" {{artefactIcons[name]}} "></i> {{name}}</a>
+          </span>
+          </p>
+        </div>
       </div>
+      <hr>
     </div>
-    <hr>
+
   </div>
 </div>
