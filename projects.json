@@ -57,7 +57,7 @@
         "Data Visualization"
       ],
       "image": "images/airport-client.jpeg",
-      "description": "This project involved building an enterprise data platform from scratch for a major Australian airport to monitor and improve passenger flow and reduce congestion. The project required four main skillsets: infrastructural integration, analytics, visualization and front-end development. I was involved in the first three aspects, helping to design the database structure for integration in Azure, modeling wifi data to track and predict foot traffic, and building out several visualization elements in Power BI. The platform provided the client's central operations tower with a real-time dashboard feed of passenger flow and areas of congestion at the arrival and departure terminals, enabling proactive flow management. It ultimately won an industry Technology award from the Australian Airports Association for innovation and excellence.",
+      "description": "This project involved building an enterprise data platform from scratch for a major Australian airport to monitor and improve passenger flow and reduce congestion. I was involved in designing the database structure for integration in Azure, modeling WiFi data to track and predict foot traffic, and building visualizations in Power BI. The platform provided the client's central operations tower with a real-time dashboard feed of passenger flow and areas of congestion at the arrival and departure terminals, enabling proactive flow management. It ultimately won an industry Technology award from the Australian Airports Association for innovation and excellence.",
       "artefacts": []
     },
     {
@@ -68,7 +68,7 @@
         "Machine Learning"
       ],
       "image": "images/energy-client.png",
-      "description": "This project aimed to help an energy utility client streamline its customer contact points and reduce call center costs. In terms of analytics, I was involved in designing a database for the purpose of multi-channel analysis (that is, across the various channels that customers would contact the client, such as by phone, website and app) and then used this to develop a predictive model to classify repeat callers to proactively manage their main call reasons. For the first task, I designed the multi-channel database as an analytic record, an architectural pattern that has the advantage of being easily added to by a real-time stream of records, and which is readily consumable by a machine learning model. I also created random forest and XGBoost classifier models in Python to predict repeat callers, and used 'average precision' as the performance metric, as it works better than the standard 'accuracy' metric when the classes (in this case, repeat callers and non-repeat callers) are highly imbalanced. The random forest model achieved an average precision score of 0.7, translating into potential savings in proactive call management of several million dollars per year.",
+      "description": "This project aimed to help an energy utility client streamline its customer contact points and reduce call center costs. I designed a database for the purpose of customer multi-channel analysis (channels being the website, phone, app, etc.) as an analytic record — an architectural pattern that has the advantage of being easily added to by a real-time stream of records, and which is readily consumable by a machine learning model. I also built a predictive model to classify repeat callers using random forest and XGBoost classifier models in Python, and used average precision as the performance metric due to imbalanced classes. The random forest model achieved an average precision score of 0.7, translating into potential savings in proactive call management of several million dollars per year.",
       "artefacts": []
     },
     {
@@ -80,7 +80,7 @@
         "Data Visualization"
       ],
       "image": "images/telco-client-flaps.png",
-      "description": "This project aimed to help a telco client improve its ability to manage modem flaps (intermittent connectivity dropouts from the network). Flapping issues could be classified as modem-based (originating from a specific customer's modem) or network-based (a network-wide problem). These two cases should be treated differently to be cost-efficient, but the client did not have the ability to distinguish them. To do so, I built a classifier model by using a decision tree-based model on several feature variables, as well as a graph database (Neo4j) to identify close-proximity groups of problematic nodes. To aid modeling and stakeholder communication, I also visualized the telco network graph, both geographically (with R's leaflet package) and logically (with R's visNetwork package).",
+      "description": "This project aimed to help a telco client improve its ability to manage modem flaps (intermittent connectivity dropouts from the network). Flapping issues could be classified as originating from the customer or the network, which should be treated differently but had been indistinguishable to the client. I built a classifier model by using a decision tree-based model and graph database (Neo4j) to identify close-proximity groups of problematic nodes. To aid modeling and stakeholder communication, I also visualized the telco network graph, both geographically (with R's leaflet package) and logically (with R's visNetwork package).",
       "artefacts": []
     },
     {
@@ -91,7 +91,7 @@
         "Theory of Constraints"
       ],
       "image": "images/telco-client-workforce.png",
-      "description": "This project aimed to help a telco client improve the forecasting accuracy and capacity management processes of their technician workforce. With their original operational model, new customers would schedule an appointment with the client to a get a technician to install a connection from their home to the network. However, this demand was difficult to forecast, being highly volatile from day to day, which made it expensive for the client as they had to continuously expand and contract their workforce. From the outset of the project, I challenged the idea that improving forecasting accuracy was the real goal. Using the Theory of Constraints, a management paradigm built on operations research principles, I identified the overarching goal (connecting end users efficiently to the network) and key conflict (lead time required) to propose a solution that would not only improve the project's initial KPIs but also  significantly reduce operational expenses. Though not implemented due to scope constraints, it gained endorsement from the client.",
+      "description": "This project aimed to help a telco client improve the forecasting accuracy and capacity management processes of their technician workforce. After analyzing the processes involved, I challenged the idea that improving forecasting accuracy was the real goal. Using the Theory of Constraints, a management paradigm built on operations research principles, I identified the overarching goal (connecting end users efficiently to the network) and key conflict (lead time required) to propose a solution that would not only improve the project's initial KPIs but also significantly reduce operational expenses.",
       "artefacts": []
     },
     {
@@ -102,7 +102,7 @@
         "Mathematical Optimization"
       ],
       "image": "images/network-design.jpg",
-      "description": "This project aimed to help a national Internet provider to design the layout of a fiber-optic network, to provide Internet access to cities of around 20,000 homes each. The goal was to find a layout that minimized the cost of the cabling and new infrastructure along streets, while still connecting all homes. Mathematically, we formulated this as a mixed integer program and solved it using Gurobi. My contribution to this project was in designing and implementing rules to avoided cables trespassing on private property. For a zipcode of 20,000 premises, this was a mixed integer program with 200,000 variables and 200,000 constraints. Using these and other operations research techniques, the company’s software reduced design time by 80% as compared to traditional layout planning methods.",
+      "description": "This project aimed to help a national Internet provider to design cost-efficient layouts of a fiber-optic Internet network to cities of around 20,000 homes each. This was mathematically formulated as a mixed integer program and solved using Gurobi, an optimization software. The company’s software reduced design time by 80% as compared to traditional layout planning methods.",
       "artefacts": []
     },
     {
@@ -112,7 +112,7 @@
         "Web Development"
       ],
       "image": "images/website.png",
-      "description": "I have been programming with web development languages (originally HTML, CSS and JavaScript) since elementary school, and have dabbled every now and then in side-projects for creating various personal websites and JavaScript applications. I have since expanded my repertoire of programming languages, both in web development and analytics. This website was wholly built by me from scratch, and employs HTML, CSS, JavaScript, AngularJS, JQuery and Bootstrap. AngularJS was used to make this a single page application (SPA) so that moving to a different page doesn't cause the browser to refresh, while also allowing for a modularized code structure using the model-view-controller pattern (i.e., the code for the content, skin and display mechanism respectively are separated). Feel free to look under the hood!",
+      "description": "I created this website from scratch, using HTML, CSS, JavaScript, AngularJS, JQuery and Bootstrap. It is a single page application (SPA) so that moving to a different page doesn't cause the browser to refresh. The code is also structured modularly with the model-view-controller pattern — that is, the code for the content, skin and display mechanism respectively are separated.",
       "artefacts": [
         {
           "GitHub": "https://github.com/jonathan-ling/jonathan-ling.github.io"
