@@ -20,7 +20,7 @@
 </div>
 
 <div class="row">
-   <div class="col-lg-8 col-lg-offset-2">
+   <div class="col-lg-10 col-lg-offset-1">
     <div ng-repeat="project in contents | filter: {tags: tagCategoriesDict[selectedTagCategory]} : tagCategoriesComparator">
       <h3> {{ project.title }} </h3>
       <p style="font-style: italic" ng-bind-html="trust(project.client)"></p>
@@ -30,9 +30,9 @@
       <br><br>
       
       <div class="row">
-        <div class="col-md-2 vcenter">
+        <div class="col-md-3 vcenter">
           <img src=" {{project.image}} " class="img-responsive">
-        </div><div class="col-md-10 vcenter">
+        </div><div class="col-md-9 vcenter">
           <p>
           {{ project.description }}
           <br>

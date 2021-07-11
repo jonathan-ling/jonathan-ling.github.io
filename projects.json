@@ -25,7 +25,7 @@
         "Machine Learning"
       ],
       "image": "images/natural-language-processing.png",
-      "description": "BERT, a transformer-based model often used for natural language processing, has been used in various research for fact extraction and verification tasks, but suffers from various issues when applied to claim verification. In this project, we aimed to implement the BERT model for claim verification on the FEVER (Fact Extraction and Verification) dataset, and suggest and implement six improvement approaches to the original BERT model - pre-processing evidence via data augmentation (synonym replacement and back-translation), changing the transformer settings (BERT vs DistilBERT and number of epochs), and post- processing its results neurally. While our modifications did not result in significant changes to the FEVER score, likely due to BERT's strong pre-training, applying our neural aggregation layer improved performance on the DistilBERT model, a lighter version of the BERT model.",
+      "description": "BERT, a transformer-based model often used in natural language processing, has been used in various research for fact extraction and verification tasks, but suffers from various issues when applied to claim verification. In this project, we aimed to implement the BERT model for claim verification on the FEVER (Fact Extraction and Verification) dataset, and suggest and implement six improvement approaches to the original BERT model - pre-processing evidence via data augmentation (synonym replacement and back-translation), changing the transformer settings (BERT vs DistilBERT and number of epochs), and post- processing its results neurally. While our modifications did not result in significant changes to the FEVER score, likely due to BERT's strong pre-training, applying our neural aggregation layer improved performance on the DistilBERT model, a lighter version of the BERT model.",
       "artefacts": [
         {
           "Paper": "artefacts/2021.03 BERT FEVER.pdf",
@@ -111,7 +111,7 @@
     },
     {
       "title": "Predicting Repeat Callers with Classifier Models",
-      "client": "Accenture project with an energy utlity client",
+      "client": "Accenture project with an energy utility client",
       "tags": [
         "Data Science",
         "Machine Learning"
@@ -161,7 +161,7 @@
         "Web Development"
       ],
       "image": "images/website.png",
-      "description": "I created this website from scratch, using HTML, CSS, JavaScript, AngularJS, JQuery and Bootstrap. It is a single page application (SPA) so that moving to a different page doesn't cause the browser to refresh. The code is also structured modularly with the model-view-controller pattern — that is, the code for the content, skin and display mechanism respectively are separated.",
+      "description": "I created this portfolio website from scratch, using HTML, CSS, JavaScript, AngularJS, JQuery and Bootstrap. It is a single page application (SPA) so that moving to a different page doesn't cause the browser to refresh. The code is also structured modularly with the model-view-controller pattern — that is, the code for the content, skin and display mechanism respectively are separated.",
       "artefacts": [
         {
           "GitHub": "https://github.com/jonathan-ling/jonathan-ling.github.io"
