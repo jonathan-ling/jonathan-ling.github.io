@@ -5,7 +5,7 @@ app.controller('mainController', function($scope, $http, $sce){
         'Presentation': 'fa fa-file',
         'Video': 'fa fa-video',
         'GitHub': 'fab fa-github',*/
-        'Paper': 'https://img.shields.io/badge/PDF-See_Presentation-darkred?logo=adobe-acrobat-reader',
+        'Paper': 'https://img.shields.io/badge/PDF-See_Paper-darkred?logo=adobe-acrobat-reader',
         'Presentation': 'https://img.shields.io/badge/PDF-See_Presentation-darkred?logo=adobe-acrobat-reader',
         'Video': 'https://img.shields.io/badge/YouTube-View_On_YouTube-red?logo=YouTube',
         'GitHub': 'https://img.shields.io/badge/GitHub-View_On_GitHub-blue?logo=GitHub',
