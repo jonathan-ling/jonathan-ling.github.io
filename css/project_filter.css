@@ -1,0 +1,24 @@
+.tag-nav-block{
+    position:relative;
+    overflow:hidden;
+    margin: 5px auto;
+    }
+.tag-nav-block a {
+    background-color: var(--filterAccent);
+    border-radius: 5px;
+    display: block;
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+}
+.tag-nav-block a:hover{
+    cursor: pointer;
+    background-color: var(--filterShade);
+    text-decoration: none;
+}
+
+.tag-nav-block-icon {
+    display: inline-block;
+    margin: 0 0 5px;
+}

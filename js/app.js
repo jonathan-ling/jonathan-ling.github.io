@@ -21,15 +21,6 @@ app.config(function($routeProvider) {
          }
        }
     })
-    .when("/resume", {
-        templateUrl : "resume.html",
-        resolve: {
-         init: function() {
-           $('.navbar-nav li').removeClass('active');
-           $('#my-nav-resume').addClass('active');
-         }
-       }
-    })
     .when("/projects", {
         templateUrl : "projects.html",
         resolve: {

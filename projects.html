@@ -2,10 +2,26 @@
   <h2><b>Projects</b></h2>
 </div>
 
+<div class="container">
+  <div class="row">
+    <div ng-init="selectedTagCategory='all'"></div>
+    <div class="col-md-1"></div>
+    <div class="col-md-2" ng-repeat="category in tagCategories">
+      <div class="tag-nav-block">
+          <a ng-click="$parent.selectedTagCategory=category">
+            <div class="tag-nav-block-icon"><i class=" {{artefactIcons[category]}} "></i></div>
+            <br>
+            <span class="tag-nav-block-title"> {{category}} </span>  
+          </a>
+      </div>
+    </div>
+    <div class="col-md-1"></div>
+  </div>
+</div>
+
 <div class="row">
    <div class="col-lg-8 col-lg-offset-2">
-
-    <div ng-repeat="project in contents">
+    <div ng-repeat="project in contents | filter: {tags: tagCategoriesDict[selectedTagCategory]} : tagCategoriesComparator">
       <h3> {{ project.title }} </h3>
       <p style="font-style: italic" ng-bind-html="trust(project.client)"></p>
       <span ng-repeat="tag in project.tags">
@@ -21,7 +37,7 @@
           {{ project.description }}
           <br>
           <span ng-repeat="(name, link) in project.artefacts[0]">
-            <a href=" {{link}} " target="_blank" class="btn btn-primary btn-xs"><i class=" {{artefactIcons[name]}} "></i> {{name}}</a>
+            <a href=" {{link}} " target="_blank"><img src=" {{artefactIcons[name]}} "></a>
           </span>
           </p>
         </div>

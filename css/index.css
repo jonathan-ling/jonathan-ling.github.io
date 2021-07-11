@@ -4,6 +4,8 @@
     --navBarShade: #A33327; /*#0F292F; /* Nav bar */
     --navBarAccent: #D7695A; /*#14A098; /* Nav bar highlight */
     --darkShade: black; /*#501F3A; /* Footer */
+    --filterShade: #8B4513;
+    --filterAccent: #A35F27;
 }
 
 /* Font faces */
@@ -71,7 +73,7 @@ footer {
 
 .label-tags {
   color: var(--lightShade);
-  background-color: var(--navBarAccent);
+  background-color: var(--filterAccent);
 }
 
 .vcenter {
