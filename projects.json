@@ -2,7 +2,7 @@
   "projects": [
     {
       "title": "Cryptocurrency Alpha Models via Intraday Technical Trading",
-      "client": "Stanford University course project (<a href=\"https://explorecourses.stanford.edu/search?q=MS%26E448&academicYear=20202021\" target=\"_blank\">MS&E 448</a> - Big Financial Data and Algorithmic Trading)",
+      "client": "Stanford University course project (<a href=\"https://explorecourses.stanford.edu/search?q=MS%26E448&academicYear=20202021\" target=\"_blank\">MS&E 448</a> — Big Financial Data and Algorithmic Trading)",
       "tags": [
         "Data Science",
         "Machine Learning"
@@ -19,13 +19,13 @@
     },
     {
       "title": "Six Approaches to Improve BERT for Claim Verification as Applied to the Fact Extraction and Verification Challenge (FEVER) Dataset",
-      "client": "Stanford University course project (<a href=\"https://explorecourses.stanford.edu/search?q=CS224N&academicYear=20202021\" target=\"_blank\">CS 224N</a> - Natural Language Processing with Deep Learning)",
+      "client": "Stanford University course project (<a href=\"https://explorecourses.stanford.edu/search?q=CS224N&academicYear=20202021\" target=\"_blank\">CS 224N</a> — Natural Language Processing with Deep Learning)",
       "tags": [
         "Data Science",
         "Machine Learning"
       ],
       "image": "images/natural-language-processing.png",
-      "description": "BERT, a transformer-based model often used in natural language processing, has been used in various research for fact extraction and verification tasks, but suffers from various issues when applied to claim verification. In this project, we aimed to implement the BERT model for claim verification on the FEVER (Fact Extraction and Verification) dataset, and suggest and implement six improvement approaches to the original BERT model - pre-processing evidence via data augmentation (synonym replacement and back-translation), changing the transformer settings (BERT vs DistilBERT and number of epochs), and post- processing its results neurally. While our modifications did not result in significant changes to the FEVER score, likely due to BERT's strong pre-training, applying our neural aggregation layer improved performance on the DistilBERT model, a lighter version of the BERT model.",
+      "description": "BERT, a transformer-based model often used in natural language processing, has been used in various research for fact extraction and verification tasks, but suffers from various issues when applied to claim verification. In this project, we aimed to implement the BERT model for claim verification on the FEVER (Fact Extraction and Verification) dataset, and suggest and implement six improvement approaches to the original BERT model — pre-processing evidence via data augmentation (synonym replacement and back-translation), changing the transformer settings (BERT vs DistilBERT and number of epochs), and post- processing its results neurally. While our modifications did not result in significant changes to the FEVER score, likely due to BERT's strong pre-training, applying our neural aggregation layer improved performance on the DistilBERT model, a lighter version of the BERT model.",
       "artefacts": [
         {
           "Paper": "artefacts/2021.03 BERT FEVER.pdf",
@@ -35,7 +35,7 @@
     },
     {
       "title": "Augmenting Node Information for Homogeneous Graphs",
-      "client": "Stanford University course project (<a href=\"https://explorecourses.stanford.edu/search?q=CS224W&academicYear=20202021\" target=\"_blank\">CS 224W</a> - Machine Learning with Graphs)",
+      "client": "Stanford University course project (<a href=\"https://explorecourses.stanford.edu/search?q=CS224W&academicYear=20202021\" target=\"_blank\">CS 224W</a> — Machine Learning with Graphs)",
       "tags": [
         "Data Science",
         "Machine Learning"
@@ -66,7 +66,7 @@
     },
     {
       "title": "Developing a Digital Scheduling Product for the US Air Force",
-      "client": "Stanford University course project (<a href=\"https://explorecourses.stanford.edu/search?q=MS%26E297&academicYear=20192020\" target=\"_blank\">MS&E 297</a> - \"Hacking for Defense\": Solving National Security issues with the Lean Launchpad) taught by Steve Blank, pioneer of the Lean Launchpad methodology",
+      "client": "Stanford University course project (<a href=\"https://explorecourses.stanford.edu/search?q=MS%26E297&academicYear=20192020\" target=\"_blank\">MS&E 297</a> — \"Hacking for Defense\": Solving National Security issues with the Lean Launchpad) taught by Steve Blank, pioneer of the Lean Launchpad methodology",
       "tags": [
         "Entrepreneurship",
         "Lean Launchpad",
@@ -84,7 +84,7 @@
     },
     {
       "title": "Dynamically Pricing Airline Tickets Using Reinforcement Learning",
-      "client": "Stanford University course project (<a href=\"https://explorecourses.stanford.edu/search?q=AA228&academicYear=20192020\" target=\"_blank\">AA 228</a> - Decision Making Under Uncertainty)",
+      "client": "Stanford University course project (<a href=\"https://explorecourses.stanford.edu/search?q=AA228&academicYear=20192020\" target=\"_blank\">AA 228</a> — Decision Making Under Uncertainty)",
       "tags": [
         "Data Science",
         "Machine Learning"
