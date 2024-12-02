@@ -81,6 +81,6 @@ app.config(['$locationProvider', function($locationProvider) {
 }]);
 
 // Other
-u = atob('QWRtYnB4bWJ2cG1PdlJIYnBGV2I=').split('').reverse().join('');
-d = atob('c3RhbmZvcmQuZWR1');
+u = atob('PUFVTTJFelp1bEdidUZHYTBGbWJ2cG1PdlJIYnBGV2I=').split('').reverse().join('');
+d = atob('Z21haWwuY29t');
 send = atob(u)+d;
