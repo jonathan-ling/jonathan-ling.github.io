@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jonathan Ling | KSSG VP Internal Affairs</title>
+  <link rel="shortcut icon" href="icons/favicon.ico">
+  <style>
+    @font-face { font-family: Montserrat; src: url("fonts/Montserrat/montserrat-regular.ttf"); font-weight: 400; }
+    @font-face { font-family: Montserrat; src: url("fonts/Montserrat/montserrat-italic.ttf"); font-weight: 400; font-style: italic; }
+    @font-face { font-family: Montserrat; src: url("fonts/Montserrat/montserrat-bold.ttf"); font-weight: 700 900; }
+    @font-face { font-family: Montserrat; src: url("fonts/Montserrat/montserrat-boldItalic.ttf"); font-weight: 700 900; font-style: italic; }
+    :root {
+      --ink: #17202a;
+      --muted: #5d6873;
+      --line: #d9dee3;
+      --paper: #f7f8f7;
+      --white: #ffffff;
+      --accent: #A33327;
+      --accent-soft: #F7E9E6;
+      --dark: #A33327;
+      --navBarAccent: #D7695A;
+      --filterShade: #8B4513;
+      --filterAccent: #A35F27;
+      --max: 1080px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font-family: Montserrat, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+    }
+
+    a { color: inherit; }
+
+    .page {
+      width: min(var(--max), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      padding: 24px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .wordmark {
+      font-size: 14px;
+      font-weight: 750;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-size: 13px;
+      color: var(--muted);
+      margin-left: 22px;
+    }
+
+    nav a:hover { color: var(--ink); }
+
+    /* Hero */
+    .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1.6fr) minmax(220px, 0.6fr);
+        gap: clamp(28px, 4vw, 56px);
+        align-items: center;
+        padding: clamp(48px, 7vh, 82px) 0;
+        overflow: hidden;
+    }
+
+    .eyebrow {
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(46px, 7vw, 82px);
+      line-height: .98;
+      letter-spacing: -.055em;
+      margin: 0 0 24px;
+      max-width: 760px;
+      white-space: nowrap;
+    }
+
+    .hero-lede {
+      font-size: clamp(20px, 2.2vw, 27px);
+      line-height: 1.3;
+      max-width: 720px;
+      margin: 0;
+      color: #34404a;
+    }
+
+    .hero-side {
+      border-left: 1px solid var(--line);
+      padding-left: 28px;
+    }
+
+    .hero-side .number {
+      font-size: 52px;
+      font-weight: 800;
+      line-height: 1;
+      letter-spacing: -.05em;
+      color: var(--accent);
+    }
+
+    .hero-side p {
+      margin: 10px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* Section framing */
+    section { padding: 72px 0; }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      gap: 40px;
+      margin-bottom: 28px;
+      align-items: start;
+    }
+
+    .section-kicker {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
+    .section-head h2 {
+      margin: 0;
+      font-size: clamp(30px, 4vw, 46px);
+      letter-spacing: -.035em;
+      line-height: 1.05;
+    }
+
+    .section-head p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      max-width: 720px;
+    }
+
+    /* Role grid */
+    .role-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .role-card {
+      min-height: 255px;
+      padding: 32px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      position: relative;
+    }
+
+    .role-card:hover {
+      background: #fbfbfa;
+    }
+
+    .icon {
+      width: 42px;
+      height: 42px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      color: var(--accent);
+      background: var(--accent-soft);
+      font-size: 20px;
+      margin-bottom: 26px;
+    }
+
+    .role-number {
+      position: absolute;
+      right: 28px;
+      top: 28px;
+      color: #aeb6bd;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .08em;
+    }
+
+    .role-card h3 {
+      margin: 0 0 9px;
+      font-size: 22px;
+      letter-spacing: -.02em;
+    }
+
+    .role-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+      max-width: 430px;
+    }
+
+    .role-card ul {
+      padding: 0;
+      margin: 16px 0 0;
+      list-style: none;
+      color: #3f4a54;
+      font-size: 14px;
+    }
+
+    .role-card li {
+      margin: 7px 0;
+      padding-left: 18px;
+      position: relative;
+    }
+
+    .role-card li::before {
+      content: "→";
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    /* Student-facing bridge */
+    .bridge {
+      background: var(--dark);
+      color: white;
+      padding: 54px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 54px;
+      align-items: center;
+    }
+
+    .bridge .icon {
+      background: transparent;
+      border-color: rgba(255,255,255,.25);
+      color: white;
+    }
+
+    .bridge h2 {
+      margin: 0 0 12px;
+      font-size: clamp(30px, 4vw, 44px);
+      letter-spacing: -.035em;
+      line-height: 1.05;
+    }
+
+    .bridge p {
+      margin: 0;
+      color: #d6dce1;
+      max-width: 620px;
+    }
+
+    .contact-box {
+      border-left: 1px solid rgba(255,255,255,.22);
+      padding-left: 32px;
+    }
+
+    .contact-box strong {
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .contact-box a {
+      color: white;
+      font-weight: 700;
+      text-decoration: none;
+      border-bottom: 1px solid rgba(255,255,255,.4);
+    }
+
+    /* How I work */
+    .method {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--white);
+    }
+
+    .method-step {
+      padding: 28px 24px 30px;
+      border-right: 1px solid var(--line);
+    }
+
+    .method-step:last-child { border-right: 0; }
+
+    .method-step .mini-icon {
+      font-size: 19px;
+      color: var(--accent);
+      margin-bottom: 22px;
+    }
+
+    .method-step h3 {
+      margin: 0 0 6px;
+      font-size: 17px;
+    }
+
+    .method-step p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* Background / evidence */
+    .evidence {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--line);
+      border: 1px solid var(--line);
+    }
+
+    .evidence-card {
+      background: var(--white);
+      padding: 34px;
+    }
+
+    .evidence-card .big {
+      font-size: 48px;
+      line-height: 1;
+      letter-spacing: -.05em;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 15px;
+    }
+
+    .evidence-card h3 {
+      margin: 0 0 8px;
+      font-size: 21px;
+    }
+
+    .evidence-card p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* Footer CTA */
+    .footer-cta {
+      padding: 76px 0 88px;
+      text-align: center;
+    }
+
+    .footer-cta .icon {
+      margin-bottom: 20px;
+    }
+
+    .footer-cta h2 {
+      margin: 0 auto 12px;
+      font-size: clamp(34px, 5vw, 58px);
+      letter-spacing: -.045em;
+      line-height: 1;
+    }
+
+    .footer-cta p {
+      max-width: 600px;
+      margin: 0 auto 24px;
+      color: var(--muted);
+    }
+
+    .button {
+      display: inline-block;
+      padding: 12px 20px;
+      border-radius: 8px;
+      background: var(--accent);
+      color: white;
+      text-decoration: none;
+      font-weight: 750;
+      font-size: 14px;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 22px 0 30px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    /* Mobile */
+    @media (max-width: 760px) {
+      .page { width: min(100% - 28px, var(--max)); }
+
+      nav { display: none; }
+
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 58px 0;
+        gap: 30px;
+      }
+
+      .hero-side {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+        padding: 22px 0 0;
+      }
+
+      .section-head {
+        grid-template-columns: 1fr;
+        gap: 10px;
+      }
+
+      .role-grid,
+      .evidence,
+      .bridge {
+        grid-template-columns: 1fr;
+      }
+
+      .role-card { min-height: auto; }
+
+      .bridge {
+        padding: 34px 28px;
+        gap: 30px;
+      }
+
+      .contact-box {
+        border-left: 0;
+        border-top: 1px solid rgba(255,255,255,.22);
+        padding: 26px 0 0;
+      }
+
+      .method {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .method-step:nth-child(2) {
+        border-right: 0;
+      }
+
+      .method-step:nth-child(-n+2) {
+        border-bottom: 1px solid var(--line);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .method { grid-template-columns: 1fr; }
+      .method-step { border-right: 0; border-bottom: 1px solid var(--line); }
+      .method-step:last-child { border-bottom: 0; }
+      .hero h1 { font-size: 48px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="page nav">
+      <div class="wordmark">Jonathan · KSSG</div>
+      <nav>
+        <a href="#background">About me</a>
+        <a href="#role">The role</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="page hero" style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 40px; padding-top: 64px;">
+      <div style="flex: 1 1 500px; max-width: 760px;">
+        <h1 style="font-size:clamp(48px, 7vw, 96px); margin-bottom:16px;">Jonathan Ling</h1>
+        <div style="font-size:clamp(25px,3vw,40px); font-weight:700; line-height:1.08; margin-bottom:26px; max-width:760px;">for Vice President of Internal Affairs</div>
+        <p class="hero-lede" style="max-width:690px;">I like making complicated organizations work. Internal Affairs is the part of KSSG where that matters most: student organizations, elections, school-wide issues, and the details that keep KSSG itself running.</p>
+        <p style="margin-top:22px;"><a href="https://www.linkedin.com/in/jonathan-ling/" style="font-weight:700; color:var(--accent); text-decoration:none;">LinkedIn ↗</a></p>
+      </div>
+      <div style="flex: 1 1 350px; max-width: 430px; border:0px solid var(--line); display:flex; align-items:center; justify-content:center; position:relative;">
+        <div style="text-align:center; color:var(--muted); padding:2px; width: 100%; justify-self: end;">
+          <img src="images/profile.jpeg" style="display: block; width: 100%; height: auto; aspect-ratio: 1/1; object-fit: cover; border-radius: 12px; ">
+        </div>
+      </div>
+    </section>
+
+    <section id="background" class="page" style="padding-top:30px;">
+      <div class="section-head">
+        <div class="section-kicker">Why I'm running</div>
+        <div>
+          <h2>I've spent a lot of time thinking about how organizations actually work.</h2>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);">
+        <div style="background:white;padding:42px;">
+          <p style="font-size:20px;line-height:1.55;margin:0 0 18px;">
+            <h3 style="font-size:25px;margin:0 0 12px;">I bring a background in operations 🌍</h3>
+            Before HKS, I ran a 400-person agricultural supply chain in Kenya. On paper, my job was operations. In practice, much of it was hearing from the front line, figuring out why something wasn't working, then getting the right people together to fix it.</p>
+        </div>
+        <div style="background:#F7E9E6;padding:42px;display:flex;flex-direction:column;justify-content:center;">
+          <h3 style="font-size:25px;margin:0 0 12px;">That's why Internal Affairs caught my attention ⚙️</h3>
+          <p style="margin:0;color:var(--muted);font-size:16px;">It's a role about the less glamorous parts of an organization that matter when you need them: fair elections, a student organization trying to get something done, an issue with a school service, or a KSSG meeting that needs to lead somewhere.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="role" class="page">
+      <div class="section-head">
+        <div class="section-kicker">The role</div>
+        <div><h2>Internal Affairs is broader than the name makes it sound</h2></div>
+      </div>
+      <div class="role-grid">
+        <article class="role-card" style="background:#FFF7E8;"><div class="icon" style="background:#FFE1A8;color:#8B4513;border:0;font-size:24px;">♟</div><div class="role-number">01</div><h3>Student organizations</h3><p>Be the main KSSG liaison for HKS-authorized student organizations and help with certification</p><ul><li>A clear point of contact inside KSSG</li><li>Help student groups navigate certification</li></ul></article>
+        <article class="role-card" style="background:#F1F0FF;"><div class="icon" style="background:#D9D4FF;color:#4D3EA8;border:0;font-size:24px;">✓</div><div class="role-number">02</div><h3>Elections & governance</h3><p>Chair the Elections and Internal Affairs Committees, and look after KSSG's Charter and Bylaws</p><ul><li>Run the machinery behind KSSG elections</li><li>Keep our governing rules up to date</li></ul></article>
+        <article class="role-card" style="background:#EAF7F4;"><div class="icon" style="background:#BFE8DE;color:#176B5B;border:0;font-size:24px;">↔</div><div class="role-number">03</div><h3>Students ↔ HKS</h3><p>Be KSSG's point person for school-wide committees, IT, student services, facilities and the Library</p><ul><li>Bring student issues to the right place</li><li>Help close the loop across HKS</li></ul></article>
+        <article class="role-card" style="background:#FBEDEF;"><div class="icon" style="background:#F2C7CE;color:#A33327;border:0;font-size:24px;">▤</div><div class="role-number">04</div><h3>KSSG itself</h3><p>Keep the basic machinery of KSSG working - meeting agendas, minutes, rooms and online logistics</p><ul><li>Organize meetings and make them easier to follow</li><li>Maintain committee decisions and records</li></ul></article>
+      </div>
+    </section>
+
+    <section id="contact" class="page" style="padding-top:0;">
+      <div class="bridge" style="background:#A33327;">
+        <div>
+          <div class="icon" style="background:#D7695A;border:0;color:white;font-size:24px;">💬</div>
+          <h2>And yes, you can still talk to me.</h2>
+          <p>Internal Affairs is not the presidency, but I would still be one of your KSSG VPs. If something is bothering you, you have an idea, or simply don't know who in HKS owns an issue, I'm happy to listen and help work out where it should go.</p>
+        </div>
+        <div class="contact-box">
+          <div style="font-size:44px;margin-bottom:14px;">🗳️</div>
+          <strong>Elections are especially student-facing.</strong>
+          <p>As chair of the Elections Committee, Internal Affairs is responsible for a process in which every student should be able to have confidence and feel represented.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="page footer-cta" style="padding-top:40px;">
+      <div class="icon" style="background:#F7E9E6;border:0;color:#A33327;font-size:24px;">↗</div>
+      <h2>Jonathan Ling</h2>
+      <p>Candidate for KSSG Vice President of Internal Affairs</p>
+      <a class="button" href="https://www.linkedin.com/in/jonathan-ling/">Connect on LinkedIn ↗</a>
+    </section>
+  </main>
+
+  <footer>
+    <div class="page">
+      KSSG Vice President of Internal Affairs · Jonathan Ling · HKS 2026
+    </div>
+  </footer>
+</body>
+</html>
